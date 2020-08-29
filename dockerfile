@@ -4,12 +4,9 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update 
-RUN apt-get install -y python3 python3-pip git cmake libgl1-mesa-dev
+RUN apt-get install -y python3 python3-pip git cmake libgl1-mesa-dev libglib2.0-0 libsm6 libxrender1 libxext6
 RUN pip3 install  opencv-python
 
-#RUN pip3 install tensorflow
 WORKDIR /tf_test
 
 #COPY copy_dir /tf_test/
-
-#ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
